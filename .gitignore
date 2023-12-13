@@ -1,0 +1,4 @@
+tools/AS/test/Binaries/
+*.set
+tools/AS/test/Diagnosis/
+tools/AS/test/Temp/

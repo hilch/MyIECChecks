@@ -1,0 +1,29 @@
+VAR
+	trigger_div_lreal : BOOL;
+	trigger_div_real : BOOL;
+	fbProfilerConfig : MycConfigProfiler;
+	trigger_div_sint : BOOL;
+	trigger_div_usint : BOOL;
+	trigger_div_int : BOOL;
+	trigger_div_uint : BOOL;
+	trigger_div_udint : BOOL;
+	trigger_div_dint : BOOL;
+	trigger_check_bounds1 : BOOL;
+	trigger_check_bounds2 : BOOL;
+	limited_usint : USINT(0..10);
+	limited_sint : SINT(-10..+10);
+	trigger_check_range : BOOL;
+	trigger_check_signed_subrange : BOOL;
+	trigger_check_unsigned_subrange : BOOL;
+	trigger_bad_read_access : BOOL;
+	trigger_watchdog : BOOL;
+	dynamicVariable : REFERENCE TO USINT;
+	trigger_bad_write_access : BOOL;
+	integerNumber : DINT;
+	sint : SINT;
+	enum : New_Enumeration;
+	array : ARRAY[3..9] OF USINT;
+	booleanVariable : BOOL;
+	floatingPointNumber : LREAL;
+	result : LREAL;
+END_VAR
