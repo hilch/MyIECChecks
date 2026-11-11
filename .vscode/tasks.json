@@ -1,0 +1,20 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Generate function block SVGs",
+            "type": "process",
+            "command": "python",
+            "args": [
+                "tools/fb_drawer.py",
+                "src/MyChecks/MyChecks.fun",
+                "--outdir",
+                "doc"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        }
+    ]
+}

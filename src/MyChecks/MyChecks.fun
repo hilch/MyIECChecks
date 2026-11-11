@@ -91,22 +91,5 @@ FUNCTION CheckWriteAccess : UDINT (* Check address when writing dynamic variable
 	END_VAR
 END_FUNCTION
 
-FUNCTION MycTrigger9206 : BOOL (* Force a watchdog error *)
+FUNCTION MCH_Trigger9206 : BOOL (* Force a watchdog error *)
 END_FUNCTION
-
-FUNCTION_BLOCK MycConfigProfiler (* configure profiler *)
-	VAR_INPUT
-		Enable : BOOL;
-		CreateArchive : BOOL;
-		Definition : PROFILER_DEFINITION; (*Profiler configuration*)
-	END_VAR
-	VAR_OUTPUT
-		Busy : BOOL;
-		Valid : BOOL;
-		Error : BOOL;
-		ErrorID : DINT;
-	END_VAR
-	VAR
-		internal : MycProfilingInternalType;
-	END_VAR
-END_FUNCTION_BLOCK

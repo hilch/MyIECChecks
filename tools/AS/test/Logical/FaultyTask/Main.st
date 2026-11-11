@@ -1,12 +1,9 @@
 
 PROGRAM _INIT
-	 fbProfilerConfig( Enable := FALSE ); (* reset fb *)
-	 fbProfilerConfig.Enable := TRUE;
+
 END_PROGRAM
 
 PROGRAM _CYCLIC
-	fbProfilerConfig();
-
 
 	IF trigger_div_dint THEN
 		trigger_div_dint := FALSE;
@@ -62,7 +59,7 @@ PROGRAM _CYCLIC
 		dynamicVariable := 1;
 	ELSIF trigger_watchdog THEN
 		trigger_watchdog := FALSE;	
-		MycTrigger9206();	
+		MCH_Trigger9206();	
 	END_IF
 	 
 END_PROGRAM

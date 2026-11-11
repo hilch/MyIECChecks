@@ -7,7 +7,6 @@
     <File Description="Exported functions and function blocks">MyChecks.fun</File>
     <File>MyChecks.cpp</File>
     <File>TriggerErrors.cpp</File>
-    <File>ConfigProfiler.cpp</File>
   </Files>
   <Dependencies>
     <Dependency ObjectName="sys_lib" />

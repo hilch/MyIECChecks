@@ -1,0 +1,5 @@
+* text=auto
+
+src/*.cpp linguist-language=C++
+include/*.h linguist-language=C++
+lib/* linguist-vendored

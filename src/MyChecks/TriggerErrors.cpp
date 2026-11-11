@@ -11,7 +11,7 @@
 UDINT MakeEntry(UINT number, UDINT errorInfo, STRING* text);
 
 /* Simulate watchdog error 9206 */
-plcbit MycTrigger9206(void)
+plcbit MCH_Trigger9206(void)
 {
 	MakeEntry( 9206, 0, "Watchdog Error triggered by application" );
 	__asm__(" CLI;");

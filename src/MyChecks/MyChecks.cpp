@@ -15,8 +15,6 @@
 
 unsigned long bur_heap_size = 0x10000;
 
-//#define GET_BACKTRACE_DATA(x) *((char*)0) = 0; /* create a page fault to get the backtrace data */
-#define GET_BACKTRACE_DATA {int x = 1/0;}
 
 /* helper function to make an entry into system logger */
 UDINT MakeEntry(UINT number, UDINT errorInfo, STRING* text);
@@ -25,7 +23,7 @@ UDINT MakeEntry(UINT number, UDINT errorInfo, STRING* text);
 /* Check divisor for DINT division */
 DINT CheckDivDint(DINT divisor) {
 	if( divisor == 0 ){
-		MakeEntry( 55555, divisor, "'Divide by Zero' with divisor of type DINT" );
+		MakeEntry( 55555, divisor, "CheckDivDint: 'Divide by Zero' with divisor of type DINT" );
 		DINT zero = 0;
 		DINT x = 1/zero; /* create division error 25300 to get backtrace data */
 		(void) x;
@@ -36,7 +34,7 @@ DINT CheckDivDint(DINT divisor) {
 /* Check divisor for UDINT division */
 UDINT CheckDivUdint(UDINT divisor) {
 	if( divisor == 0 ){
-		MakeEntry( 55555, divisor, "'Divide by Zero' with divisor of type UDINT" );
+		MakeEntry( 55555, divisor, "CheckDivUdint: 'Divide by Zero' with divisor of type UDINT" );
 		UDINT zero = 0;
 		UDINT x = 1/zero; /* create division error 25300 to get backtrace data */
 		(void) x;
@@ -49,7 +47,7 @@ UDINT CheckDivUdint(UDINT divisor) {
 /* Check divisor for INT division */
 INT CheckDivInt(INT divisor){
 	if( divisor == 0 ){
-		MakeEntry( 55555, divisor, "'Divide by Zero' with divisor of type INT" );
+		MakeEntry( 55555, divisor, "CheckDivInt: 'Divide by Zero' with divisor of type INT" );
 		INT zero = 0;
 		INT x = 1/zero; /* create division error 25300 to get backtrace data */
 		(void) x;
@@ -61,7 +59,7 @@ INT CheckDivInt(INT divisor){
 /* Check divisor for UINT division */
 UINT CheckDivUint(UINT divisor){
 	if( divisor == 0 ){
-		MakeEntry( 55555, divisor, "'Divide by Zero' with divisor of type UINT" );
+		MakeEntry( 55555, divisor, "CheckDivUint: 'Divide by Zero' with divisor of type UINT" );
 		UINT zero = 0;
 		UINT x = 1/zero; /* create division error 25300 to get backtrace data */
 		(void) x;
@@ -73,7 +71,7 @@ UINT CheckDivUint(UINT divisor){
 
 SINT CheckDivSint(SINT divisor){
 	if( divisor == 0 ){
-		MakeEntry( 55555, divisor, "'Divide by Zero' with divisor of type SINT" );
+		MakeEntry( 55555, divisor, "CheckDivSint: 'Divide by Zero' with divisor of type SINT" );
 		SINT zero = 0;
 		SINT x = 1/zero; /* create division error 25300 to get backtrace data */
 		(void) x;
@@ -83,7 +81,7 @@ SINT CheckDivSint(SINT divisor){
 
 USINT CheckDivUsint(USINT divisor){
 	if( divisor == 0 ){
-		MakeEntry( 55555, divisor, "'Divide by Zero' with divisor of type USINT" );
+		MakeEntry( 55555, divisor, "CheckDivUsint: 'Divide by Zero' with divisor of type USINT" );
 		USINT zero = 0;
 		USINT x = 1/zero; /* create division error 25300 to get backtrace data */
 		(void) x;
@@ -94,7 +92,7 @@ USINT CheckDivUsint(USINT divisor){
 /* Check divisor for REAL division */
 REAL CheckDivReal(REAL divisor){
 	if( std::abs(divisor) < std::numeric_limits<float>::epsilon() ){
-		MakeEntry( 55555, 0, "'Divide by Zero' with divisor of type REAL" );
+		MakeEntry( 55555, 0, "CheckDivReal: 'Divide by Zero' with divisor of type REAL" );
 		int zero = 0;
 		float x = 1/zero; /* create division error 25300 to get backtrace data */
 		(void) x;
@@ -105,7 +103,7 @@ REAL CheckDivReal(REAL divisor){
 /* Check divisor for LREAL division */
 LREAL CheckDivLReal(LREAL divisor){
 	if( std::abs(divisor) < std::numeric_limits<double>::epsilon() ){
-		MakeEntry( 55555, 0, "'Divide by Zero' with divisor of type LREAL" );
+		MakeEntry( 55555, 0, "CheckDivLReal: 'Divide by Zero' with divisor of type LREAL" );
 		int zero = 0;
 		double x = 1/zero; /* create division error 25300 to get backtrace data */ 
 		(void) x;
@@ -117,7 +115,7 @@ LREAL CheckDivLReal(LREAL divisor){
 DINT CheckBounds(DINT index, DINT lower, DINT upper){
 	if( index < lower || index > upper ){
 		char info[80];
-		sprintf( info, "Array Index %d is outside [%d..%d]", index, lower, upper );
+		sprintf( info, "CheckBounds: Array Index %d is outside [%d..%d]", index, lower, upper );
 		MakeEntry( 55555, index, info );
 		*((char*)0) = 0; /* create a page fault 25314 to get the backtrace data */
 	}
@@ -128,11 +126,9 @@ DINT CheckBounds(DINT index, DINT lower, DINT upper){
 DINT CheckRange(DINT value, DINT lower, DINT upper){
 	if( value < lower || value > upper ){
 		char info[80];
-		sprintf( info, "Enumeration value %d is outside [%d..%d]", value, lower, upper );
+		sprintf( info, "CheckRange: Enumeration value %d is outside [%d..%d]", value, lower, upper );
 		MakeEntry( 55555, value, info );
-		int zero = 0;
-		double x = 1/zero; /* create division error 25300 to get backtrace data */ 
-		(void) x;
+		*((char*)0) = 0; /* create a page fault 25314 to get the backtrace data */
 	}
 	return value;
 }
@@ -141,11 +137,9 @@ DINT CheckRange(DINT value, DINT lower, DINT upper){
 DINT CheckSignedSubrange(DINT value, DINT lower, DINT upper){
 	if( value < lower || value > upper ){
 		char info[80];
-		sprintf( info, "Signed Subrange Index %d is outside [%d..%d]", value, lower, upper );
+		sprintf( info, "CheckSignedSubrange: Signed Subrange Index %d is outside [%d..%d]", value, lower, upper );
 		MakeEntry( 55555, value, info );
-		int zero = 0;
-		double x = 1/zero; /* create division error 25300 to get backtrace data */ 
-		(void) x;
+		*((char*)0) = 0; /* create a page fault 25314 to get the backtrace data */
 	}
 	return value;
 }
@@ -154,11 +148,9 @@ DINT CheckSignedSubrange(DINT value, DINT lower, DINT upper){
 UDINT CheckUnsignedSubrange(UDINT value, UDINT lower, UDINT upper){
 	if( value < lower || value > upper ){
 		char info[80];
-		sprintf( info, "Unsigned Subrange Index %d is outside [%d..%d]", value, lower, upper );
+		sprintf( info, "CheckUnsignedSubrange: Unsigned Subrange Index %d is outside [%d..%d]", value, lower, upper );
 		MakeEntry( 55555, value, info );
-		int zero = 0;
-		double x = 1/zero; /* create division error 25300 to get backtrace data */ 
-		(void) x;
+		*((char*)0) = 0; /* create a page fault 25314 to get the backtrace data */
 	}
 	return value;
 }
@@ -166,7 +158,7 @@ UDINT CheckUnsignedSubrange(UDINT value, UDINT lower, UDINT upper){
 
 UDINT CheckReadAccess(UDINT address){
 	if( address == 0 ){
-		MakeEntry( 55555, 0, "Attempt to read from address of zero / NULL" );
+		MakeEntry( 55555, 0, "CheckReadAccess: Attempt to read from address of zero / NULL" );
 		*((char*)0) = 0; /* create a page fault 25314 to get the backtrace data */
 	}
 	return address;
@@ -174,7 +166,7 @@ UDINT CheckReadAccess(UDINT address){
 
 UDINT CheckWriteAccess(UDINT address){
 	if( address == 0 ){
-		MakeEntry( 55555, 0, "Attempt to write to address of zero / NULL" );
+		MakeEntry( 55555, 0, "CheckWriteAccess: Attempt to write to address of zero / NULL" );
 		*((char*)0) = 0; /* create a page fault 25314 to get the backtrace data */
 	}
 	return address;

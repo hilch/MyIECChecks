@@ -2,10 +2,10 @@
 <?AutomationStudio FileVersion="4.9"?>
 <BR.AS.HardwareTopology>
   <TimeStamps>
-    <TimeStamp LogicalPath="Config1.Hardware.hw" LastWriteTime="12/05/2023 14:00:06" />
+    <TimeStamp LogicalPath="Config2.Hardware.hw" LastWriteTime="11/11/2026 11:00:16" />
   </TimeStamps>
   <Modules>
-    <Module Name="X20CP3585" Type="X20CP3585" X="100" Y="100" />
+    <Module Name="X20CP3685" Type="X20CP3685" X="100" Y="100" />
   </Modules>
   <Links />
   <InfoElements />
