@@ -24,6 +24,7 @@ A typical entry looks as follows:
 Check divisor for DINT division
 
 ![CheckDivDint](/doc/CheckDivDint.svg)
+
 ![CheckDivDint_table](/doc/CheckDivDint_table.svg)
 
 ### CheckDivUdint
@@ -31,6 +32,7 @@ Check divisor for DINT division
 Check divisor for UDINT division
 
 ![CheckDivUdint](/doc/CheckDivUdint.svg)
+
 ![CheckDivUdint_table](/doc/CheckDivUdint_table.svg)
 
 ### CheckDivInt
@@ -38,6 +40,7 @@ Check divisor for UDINT division
 Check divisor for INT division
 
 ![CheckDivInt](/doc/CheckDivInt.svg)
+
 ![CheckDivInt_table](/doc/CheckDivInt_table.svg)
 
 ### CheckDivUint
@@ -45,6 +48,7 @@ Check divisor for INT division
 Check divisor for UINT division
 
 ![CheckDivUint](/doc/CheckDivUint.svg)
+
 ![CheckDivUint_table](/doc/CheckDivUint_table.svg)
 
 ### CheckDivSint
@@ -52,6 +56,7 @@ Check divisor for UINT division
 Check divisor for SINT division
 
 ![CheckDivSint](/doc/CheckDivSint.svg)
+
 ![CheckDivSint_table](/doc/CheckDivSint_table.svg)
 
 ### CheckDivUsint
@@ -59,6 +64,7 @@ Check divisor for SINT division
 Check divisor for USINT division
 
 ![CheckDivUsint](/doc/CheckDivUsint.svg)
+
 ![CheckDivUsint_table](/doc/CheckDivUsint_table.svg)
 
 ### CheckDivReal
@@ -66,6 +72,7 @@ Check divisor for USINT division
 Check divisor for REAL division
 
 ![CheckDivReal](/doc/CheckDivReal.svg)
+
 ![CheckDivReal_table](/doc/CheckDivReal_table.svg)
 
 ### CheckDivLReal
@@ -73,6 +80,7 @@ Check divisor for REAL division
 Check divisor for LREAL division (not available for SG3 and SGC)
 
 ![CheckDivLReal](/doc/CheckDivLReal.svg)
+
 ![CheckDivLReal_table](/doc/CheckDivLReal_table.svg)
 
 ### CheckBounds
@@ -80,6 +88,7 @@ Check divisor for LREAL division (not available for SG3 and SGC)
 Check range for array access
 
 ![CheckBounds](/doc/CheckBounds.svg)
+
 ![CheckBounds_table](/doc/CheckBounds_table.svg)
 
 ### CheckRange
@@ -87,6 +96,7 @@ Check range for array access
 Check range for enumeration
 
 ![CheckRange](/doc/CheckRange.svg)
+
 ![CheckRange_table](/doc/CheckRange_table.svg)
 
 ### CheckSignedSubrange
@@ -94,6 +104,7 @@ Check range for enumeration
 Check range for subrange of signed data types
 
 ![CheckSignedSubrange](/doc/CheckSignedSubrange.svg)
+
 ![CheckSignedSubrange_table](/doc/CheckSignedSubrange_table.svg)
 
 ### CheckUnsignedSubrange
@@ -101,6 +112,7 @@ Check range for subrange of signed data types
 Check range for subrange of unsigned data types
 
 ![CheckUnsignedSubrange](/doc/CheckUnsignedSubrange.svg)
+
 ![CheckUnsignedSubrange_table](/doc/CheckUnsignedSubrange_table.svg)
 
 ### CheckReadAccess
@@ -108,6 +120,7 @@ Check range for subrange of unsigned data types
 Check address when reading dynamic variables
 
 ![CheckReadAccess](/doc/CheckReadAccess.svg)
+
 ![CheckReadAccess_table](/doc/CheckReadAccess_table.svg)
 
 ### CheckWriteAccess
@@ -115,6 +128,7 @@ Check address when reading dynamic variables
 Check address when writing dynamic variables
 
 ![CheckWriteAccess](/doc/CheckWriteAccess.svg)
+
 ![CheckWriteAccess_table](/doc/CheckWriteAccess_table.svg)
 
 ### MCH_Trigger9206
@@ -122,6 +136,7 @@ Check address when writing dynamic variables
 Force a watchdog error
 
 ![MCH_Trigger9206](/doc/MCH_Trigger9206.svg)
+
 ![MCH_Trigger9206_table](/doc/MCH_Trigger9206_table.svg)
 
 ## Usage
