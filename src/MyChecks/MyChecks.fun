@@ -1,35 +1,35 @@
 
-FUNCTION CheckDivDint : DINT (* Check divisor for DINT and UDINT division *)
+FUNCTION CheckDivDint : DINT (* Check divisor for DINT division *)
 	VAR_INPUT
 		divisor : DINT;
 	END_VAR
 END_FUNCTION
 
-FUNCTION CheckDivUdint : UDINT (* Check divisor for DINT and UDINT division *)
+FUNCTION CheckDivUdint : UDINT (* Check divisor for UDINT division *)
 	VAR_INPUT
 		divisor : UDINT;
 	END_VAR
 END_FUNCTION
 
-FUNCTION CheckDivInt : INT (* Check divisor for INT and UINT division *)
+FUNCTION CheckDivInt : INT (* Check divisor for INT division *)
 	VAR_INPUT
 		divisor : INT;
 	END_VAR
 END_FUNCTION
 
-FUNCTION CheckDivUint : UINT (* Check divisor for INT and UINT division *)
+FUNCTION CheckDivUint : UINT (* Check divisor for UINT division *)
 	VAR_INPUT
 		divisor : UINT;
 	END_VAR
 END_FUNCTION
 
-FUNCTION CheckDivSint : SINT (* Check divisor for SINT and USINT division *)
+FUNCTION CheckDivSint : SINT (* Check divisor for SINT division *)
 	VAR_INPUT
 		divisor : SINT;
 	END_VAR
 END_FUNCTION
 
-FUNCTION CheckDivUsint : USINT (* Check divisor for SINT and USINT division *)
+FUNCTION CheckDivUsint : USINT (* Check divisor for USINT division *)
 	VAR_INPUT
 		divisor : USINT;
 	END_VAR
