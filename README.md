@@ -16,6 +16,9 @@ MyIECChecks enhances this behavior in two key ways: first, it creates an entry i
 A typical entry looks as follows:
  ![logger_check_read_access](/doc/logger_check_read_access.png)
 
+## License
+
+This software published under [MIT license](LICENSE). Also have a look into the [disclaimer](Disclaimer.md).
 
 ## Functions / function blocks for logging
 
